@@ -1,3 +1,7 @@
+
+
+
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -30,9 +34,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
-
 dependencies {
-
+    dependencies {
+        implementation("mysql:mysql-connector-java:5.1.49")
+    }
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

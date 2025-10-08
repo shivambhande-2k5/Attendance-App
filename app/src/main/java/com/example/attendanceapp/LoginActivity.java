@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText password;
     Button loginButton;
     TextView signupText;
-    Database DB;
+    Login_Database DB;
 
 
     @Override
@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
         signupText = findViewById(R.id.signupText);
-        DB = new Database(this);
+        DB = new Login_Database(this);
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {

@@ -33,20 +33,20 @@ public class Student {
 
     }
 
-    public String getEmail(){
+    public String getEmail(){          // EMAIL GETTER
         return email;
 
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email){    // EMAIL SETTER
         this.email = email;
     }
 
-    public String getPhoneNumber(){
+    public String getPhoneNumber(){          // PHONE_NUMBER GETTER
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber){
+    public void setPhoneNumber(String phoneNumber){     // PHONE_NUMBER SETTER
         this.phoneNumber = phoneNumber;
     }
 

@@ -34,7 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
         EditText createusername;
         EditText createpassword;
         EditText confirmpassword;
-        Database DB = new Database(this);
+        Login_Database DB = new Login_Database(this);
 
 
         alreadyHaveAccount = findViewById(R.id.alreadyHaveAccount);
