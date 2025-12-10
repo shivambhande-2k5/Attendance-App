@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg3"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ClassEditorActivity">
+
+    <EditText
+        android:id="@+id/new_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Class Name "
+        android:textColorHint="@color/white"
+        android:background="@android:color/transparent"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- YEH HAI TUMHARA CARDVIEW (RelativeLayout) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:paddingTop="20dp"
+        android:paddingBottom="25dp"
+        android:paddingHorizontal="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/add_students"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:layout_marginRight="10dp"
+                app:backgroundTint="@null"
+                android:text="Add Students"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/box_background"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_marginRight="10dp"
+                android:text="Delete"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                android:background="@drawable/box_background"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:text="Create"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                android:background="@drawable/box_background"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="15dp"
+            android:listSelector="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/bottom"/>
+
+    </RelativeLayout>
+</LinearLayout>

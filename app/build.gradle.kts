@@ -1,7 +1,4 @@
 
-
-
-
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -9,7 +6,6 @@ plugins {
 android {
     namespace = "com.example.attendanceapp"
     compileSdk = 36
-
     defaultConfig {
         applicationId = "com.example.attendanceapp"
         minSdk = 24
@@ -19,7 +15,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -35,13 +30,16 @@ android {
     }
 }
 dependencies {
-    dependencies {
-        implementation("mysql:mysql-connector-java:5.1.49")
-    }
+
+    implementation(files("libs/mysql-connector-java-5.1.49.jar"))
+
+    // Android dependencies
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

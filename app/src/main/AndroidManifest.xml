@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET">
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    </uses-permission>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +12,26 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AttendanceApp">
+        android:theme="@style/Theme.AttendanceApp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ViewSession"
+            android:exported="false" />
+        <activity
+            android:name=".EditSessionStudents"
+            android:exported="false" />
+        <activity
+            android:name=".SessionEditor"
+            android:exported="false" />
+        <activity
+            android:name=".ShowSession"
+            android:exported="false" />
+        <activity
+            android:name=".StudentEditorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClassEditorActivity"
+            android:exported="false" />
         <activity
             android:name=".MainScreenActivity"
             android:exported="false" />

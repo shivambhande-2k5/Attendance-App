@@ -33,8 +33,6 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Login page
-
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
@@ -46,18 +44,17 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String user = username.getText().toString();
-                String pass = password.getText().toString();
+                String user = username.getText().toString().trim().toLowerCase();
+                String pass = password.getText().toString().trim();
 
-
-                if (username.getText().toString().trim().isEmpty() || password.getText().toString().trim().isEmpty()){          // check kr rha ki username password blank to nhi
+                if (username.getText().toString().trim().isEmpty() || password.getText().toString().trim().isEmpty()){    // check kr rha ki username password blank to nhi
                     Toast.makeText(LoginActivity.this , "Please fill the filed ", Toast.LENGTH_SHORT) . show();
 
                 }
                 else {
-                    Boolean checkuserpass = DB.checkusernamepassword(user , pass);
+                    Boolean checkuserpass = DB.checkusernamepassword(user, pass);
                         if (checkuserpass == true){
-                            Toast.makeText(LoginActivity.this, "Login succesful" , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Login successful" , Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainScreenActivity.class);
                             startActivity(intent);
                         }
@@ -72,16 +69,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //Intent ek message hota hai jo Android ko bolta hai: “Mujhe ek nayi screen open karni hai.”
-                //MainActivity.this = kaha se jaa rahe ho (current screen)
-                //SignupActivity.class = kahan jaana hai (next screen).
-
                 Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-                startActivity(intent);     // Execute kro keh raha
-
+                startActivity(intent);
             }
         });
-
-
 
 }}

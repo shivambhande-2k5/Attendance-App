@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg3"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".SessionEditor">
+
+    <TextView
+        android:id="@+id/new_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Session Editor"
+        android:textColorHint="@color/white"
+        android:background="@color/transparent"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="65dp"/>
+
+    <!-- relative layout ek full screen container hai yaha pe humne :
+
+         top padding = layout ke top edge se andar ka content 20dp neeche hoga
+         paddingBottom = layout ke bottom edge se andar ka content 25dp upar hoga
+         paddingHorizontal = left aur right side se andar ke content distance 25dp hoga
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:paddingTop="20dp"
+        android:gravity="center_horizontal"
+
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        android:paddingHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:background="@drawable/grey_background"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:hint="ID"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:background="@drawable/grey_background"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:hint="Subject "
+            android:inputType="text"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:background="@drawable/grey_background"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:hint="Date"
+            android:inputType="text"
+            android:layout_marginBottom="15dp"/>
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:background="@drawable/box_background"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:background="@drawable/box_background"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textAllCaps="false"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/editStudents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Students"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</LinearLayout>
+

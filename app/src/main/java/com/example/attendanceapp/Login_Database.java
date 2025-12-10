@@ -11,15 +11,13 @@ public class Login_Database extends SQLiteOpenHelper {
     public static final String DBName = "Login.db";         // database name
 
     public Login_Database(Context context) {
-        super(context, "Login.db", null,1);
+        super(context.getApplicationContext(), "Login.db", null,1);
 
     }
-
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
     MyDB.execSQL("CREATE TABLE users (username TEXT PRIMARY KEY, password TEXT )");
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int oldVersion, int newVersion) {
     MyDB.execSQL("DROP TABLE IF EXISTS users");
@@ -40,25 +38,22 @@ public class Login_Database extends SQLiteOpenHelper {
     }
 
     public Boolean checkusername (String username){
-        SQLiteDatabase MyDB = this.getWritableDatabase();
+        SQLiteDatabase MyDB = this.getReadableDatabase();
         Cursor cursor = MyDB.rawQuery("SELECT * FROM users WHERE username = ?", new String[] {username} );
 
         if (cursor.getCount() > 0)
         return true ;
         else
             return false;
-
     }
 
     public Boolean checkusernamepassword (String username , String password){
-        SQLiteDatabase MyDB = this.getWritableDatabase();
+        SQLiteDatabase MyDB = this.getReadableDatabase();
         Cursor cursor = MyDB.rawQuery("SELECT * FROM users WHERE username = ? AND password = ? ", new String[] {username , password});
 
         if (cursor.getCount() > 0)
             return true ;
         else
             return false;
-
     }
-
 }

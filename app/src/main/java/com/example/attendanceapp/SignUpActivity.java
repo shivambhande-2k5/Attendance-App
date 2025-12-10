@@ -56,9 +56,9 @@ public class SignUpActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = createusername.getText().toString();
-                String password    = createpassword.getText().toString();
-                String confirmpass = confirmpassword.getText().toString();
+                String username = createusername.getText().toString().trim().toLowerCase();
+                String password    = createpassword.getText().toString().trim();
+                String confirmpass = confirmpassword.getText().toString().trim();
 
                 if (username.equals("") || password.equals("") )          // check kr rha ki username password blank to nhi
                     Toast.makeText(SignUpActivity.this , "Please fill the information", Toast.LENGTH_SHORT) . show();
@@ -70,6 +70,10 @@ public class SignUpActivity extends AppCompatActivity {
                             Boolean insert = DB.insertData(username, password);
                             if (insert == true) {
                                 Toast.makeText(SignUpActivity.this, "Registered successfully ", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                                finish();
+
                             } else {
                                 Toast.makeText(SignUpActivity.this, "Registeration failed ", Toast.LENGTH_SHORT).show();
                             }
@@ -83,7 +87,5 @@ public class SignUpActivity extends AppCompatActivity {
                     }
 
         });
-
-
     }
 }

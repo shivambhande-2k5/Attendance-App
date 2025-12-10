@@ -5,56 +5,52 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_background_gradient"
+    android:background="@drawable/login_bg3"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MainScreenActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome"
-        android:textstyle="bold"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="40dp"
         android:layout_marginBottom="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="65dp"/>
 
-    <!-- relative layout ek full screen container hai yaha pe humne :
-
-         top padding = layout ke top edge se andar ka content 20dp neeche hoga
-         paddingBottom = layout ke bottom edge se andar ka content 25dp upar hoga
-         paddingHorizontal = left aur right side se andar ke content distance 25dp hoga
-    -->
-
     <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background"
-            android:paddingTop="20dp"
-            android:paddingBottom="25dp"
-            android:paddingHorizontal="25dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:paddingTop="20dp"
+        android:paddingBottom="25dp"
+        android:paddingHorizontal="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
 
-    <Button
-        android:id="@+id/new_class"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:text="New Class"
-        android:textSize="22sp"
-        android:textColor="@color/white"
-        android:background="@drawable/box_background"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textAllCaps="false"
-        android:layout_alignParentBottom = "true"
-        android:layout_centerHorizontal = "true"
-        />
+            <Button
+                android:id="@+id/new_class"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:text="New Class"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:gravity="center"
+                app:backgroundTint="@null"
+                android:textAllCaps="false"
+                android:layout_alignParentBottom = "true"
+                android:layout_centerHorizontal = "true"
+                android:background="@drawable/box_background"
+                />
 
-        <!-- ListView ka use hota hai scroll krke buttons set krne ke liye
-
-        -->
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="15dp"

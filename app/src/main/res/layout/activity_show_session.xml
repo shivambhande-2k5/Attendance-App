@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg3"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ShowSession"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sessions"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:paddingTop="20dp"
+        android:paddingBottom="25dp"
+        android:paddingHorizontal="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+        <Button
+            android:id="@+id/new_session"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="New Session"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/box_background"
+            />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:divider="@color/transparent"
+            android:dividerHeight="15dp"
+            android:listSelector="@color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/new_session"
+            />
+
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

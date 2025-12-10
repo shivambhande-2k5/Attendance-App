@@ -1,54 +1,47 @@
 package com.example.attendanceapp;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Session {
 
-    private int ID ;
-
-    private ArrayList<Student> students ;
+    private int ID;
+    private ArrayList<Student> students;
     private String subject;
     private String date;
 
-    public Session () {
+    public Session() {
         students = new ArrayList<>();
     }
 
-    public int getID (){     // GETTER
+    public int getID() {
         return ID;
-
     }
 
-    public void setID (int ID){     // SETTER
-        this.ID = ID ;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
-    public ArrayList<Student> getStudents {
+    public ArrayList<Student> getStudents() {
         return students;
     }
 
-    public void setStudents (ArrayList<Student> students){
-        this.students = students ;
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
     }
 
-    public String getSubject (){ // SUBJECT GETTER
+    public String getSubject() {
         return subject;
     }
 
-    public void setSubject (String subject){    // SUBJECT SETTER
+    public void setSubject(String subject) {
         this.subject = subject;
-
     }
 
-    public String getDate (){     // DATE GETTER
-    return date;
-
+    public String getDate() {
+        return date;
     }
 
-    public void setDate (String date){    //  DATE SETTER
-        this.date = date ;
+    public void setDate(String date) {
+        this.date = date;
     }
-
 
 }
